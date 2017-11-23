@@ -1,11 +1,11 @@
 #!/usr/bin/python
 import sqlite3
 import hashlib
-
+import os
 import shutil
 from flask import jsonify
 import json
-
+import shutil
 from static.User import User
 from werkzeug.exceptions import BadRequest
 
@@ -191,6 +191,8 @@ class DB:
         self.conn.execute(Events)
         self.conn.execute(EventIDs)
         self.conn.commit()
+        shutil.rmtree("./Images")
+        os.mkdir("./Images")
 
     @staticmethod
     def encrypt(pin):

@@ -145,9 +145,9 @@ def getPreferences():
         database.addProfile(content)
         setEvents()
         face_recognition = Facial(app.root_path)
-        face_recognition.captureImage(currentUser.email)
+        image = face_recognition.captureImage(currentUser.email)
         print("About to authenticate")
-        face_recognition.facial_authenticate(cv2.imread(currentUser.email+"/"+currentUser.email+".jpeg"))
+        face_recognition.facial_authenticate(image)
         print("Authenticated")
         webbrowser.open_new_tab(getIP() + ":5000/mirror/" + currentUser.email)
     except BadRequest as e:
