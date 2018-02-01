@@ -1,4 +1,5 @@
 # **Smart Mirror**
+  Smart Mirror is similar to the various Magic Mirror projects that are found online. However, Smart Mirror utilizes facial recognition technologies to recognize a user and display a user's profile information.
 [![Build Status](https://travis-ci.org/tenoriojuann/SmartMirror.svg?branch=master)](https://travis-ci.org/tenoriojuann/SmartMirror)
 
 ## **Set up:**
